@@ -1,9 +1,105 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChrisZeThird Projects Showcase</title>
+  <style>
+        /* CSS for tabs */
+        .tab {
+            display: none;
+            background-color: #FFFFFF;
+            padding: 20px;
+        }
 
+        .tab.active {
+            display: block;
+        }
+
+        .tab-links {
+            list-style-type: none;
+            padding: 10px 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #F2F2F2;
+        }
+
+        .tab-links li {
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .tab-link {
+            color: #666666;
+            padding: 10px 20px;
+            background-color: #E6ECF0;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab-link.active {
+            background-color: #80B6D2;
+            color: #FFFFFF;
+        }
+  </style>
+  <script>
+        // JavaScript for tabs
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all tab content elements and tab link elements
+            const tabContents = document.querySelectorAll('.tab');
+            const tabLinks = document.querySelectorAll('.tab-link');
+
+            // Function to show the selected tab and hide others
+            function showTab(tabIndex) {
+                for (let i = 0; i < tabContents.length; i++) {
+                    if (i === tabIndex) {
+                        tabContents[i].classList.add('active');
+                        tabLinks[i].classList.add('active');
+                    } else {
+                        tabContents[i].classList.remove('active');
+                        tabLinks[i].classList.remove('active');
+                    }
+                }
+            }
+
+            // Attach click event listeners to tab links
+            tabLinks.forEach(function(link, index) {
+                link.addEventListener('click', function() {
+                    showTab(index);
+                });
+            });
+
+            // Show the first tab by default
+            showTab(0);
+        });
+    </script>
+
+</head>
 <body>
-  <h1>ChrisZeThird</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
+    <h1>Welcome to my website!</h1>
+    <p>I'm currently building it so there is nothing
+    much to see at the moment. It's also a great opportunity to learn HTML
+    and CSS</p>
+    <ul class="tab-links">
+        <li class="tab-link">Physics</li>
+        <li class="tab-link">Computer Science</li>
+        <li class="tab-link">Art</li>
+    </ul>
 
+    <div class="tab active">
+        <h1>Physics</h1>
+        <p>Placeholder for Physics projects.</p>
+    </div>
+
+    <div class="tab">
+        <h1>Computer Science</h1>
+        <p>Placeholder for Computer Science projects.</p>
+    </div>
+
+    <div class="tab">
+        <h1>Art</h1>
+        <p>Placeholder for Art projects.</p>
+    </div>
+</body>
 </html>
