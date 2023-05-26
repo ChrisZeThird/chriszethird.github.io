@@ -56,6 +56,63 @@
         .home-button a:hover {
             background-color: #E6ECF0;
         }
+
+        .tab h1 {
+            font-size: 28px; /* Adjust the font size as per your preference */
+        }
+
+
+        /* CSS for project sections */
+        .project-section {
+            margin-bottom: 40px;
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            margin-bottom: 20px;
+        }
+
+        .project-album {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .project-album img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .project-album .album-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .project-album .album-navigation button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #E6ECF0;
+            color: #666666;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-album .album-navigation button:hover {
+            background-color: #80B6D2;
+            color: #FFFFFF;
+        }
+
+        .project-album .album-navigation .next-button {
+            margin-left: auto;
+        }
     </style>
     <script>
         // JavaScript for tabs (remains unchanged)
@@ -91,8 +148,9 @@
     <ul class="tab-links">
         <li class="tab-link">Home</li>
         <li class="tab-link">Physics</li>
-        <li class="tab-link">Computer Science</li>
+        <li class="tab-link">Programming</li>
         <li class="tab-link">Art</li>
+        <li class="tab-link">Contact</li>
 
     </ul>
 
@@ -102,19 +160,93 @@
 
     </div>
 
+    <!-- Physics projects section -->
     <div class="tab">
         <h2>Physics</h2>
-        <p>Placeholder for Physics projects.</p>
+        <div class="project-section">
+            <h2 class="project-title">Project 1</h2>
+            <p class="project-description">Description of Project 1.</p>
+            <div class="project-album">
+                <img src="path_to_image1.jpg" alt="Image 1">
+                <div class="album-navigation">
+                    <button class="prev-button">Previous</button>
+                    <button class="next-button">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <h2 class="project-title">Project 2</h2>
+            <p class="project-description">Description of Project 2.</p>
+            <div class="project-album">
+                <img src="path_to_image2.jpg" alt="Image 2">
+                <div class="album-navigation">
+                    <button class="prev-button">Previous</button>
+                    <button class="next-button">Next</button>
+                </div>
+            </div>
+        </div>
     </div>
 
+        <!-- Programming projects section -->
     <div class="tab">
-        <h2>Computer Science</h2>
-        <p>Placeholder for Computer Science projects.</p>
+        <h2>Programming</h2>
+        <div class="project-section">
+            <h2 class="project-title">Project 3</h2>
+            <p class="project-description">Description of Project 3.</p>
+            <div class="project-album">
+                <img src="path_to_image3.jpg" alt="Image 3">
+                <div class="album-navigation">
+                    <button class="prev-button">Previous</button>
+                    <button class="next-button">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <h2 class="project-title">Project 4</h2>
+            <p class="project-description">Description of Project 6.</p>
+            <div class="project-album">
+                <img src="path_to_image4.jpg" alt="Image 4">
+                <div class="album-navigation">
+                    <button class="prev-button">Previous</button>
+                    <button class="next-button">Next</button>
+                </div>
+            </div>
+        </div>
     </div>
 
+        <!-- Art projects section -->
     <div class="tab">
         <h2>Art</h2>
-        <p>Placeholder for Art projects.</p>
+        <div class="project-section">
+            <h2 class="project-title">Project 5</h2>
+            <p class="project-description">Description of Project 5.</p>
+            <div class="project-album">
+                <img src="path_to_image5.jpg" alt="Image 5">
+                <div class="album-navigation">
+                    <button class="prev-button">Previous</button>
+                    <button class="next-button">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <h2 class="project-title">Project 6</h2>
+            <p class="project-description">Description of Project 6.</p>
+            <div class="project-album">
+                <img src="path_to_image6.jpg" alt="Image 6">
+                <div class="album-navigation">
+                    <button class="prev-button">Previous</button>
+                    <button class="next-button">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab">
+        <h2>Contacts</h2>
+        <p>You can find all of my socials here.</p>
     </div>
 </body>
 </html>
