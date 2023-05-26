@@ -74,14 +74,22 @@
         }
 
         .project-description {
+            font-size: 15px;
             margin-bottom: 20px;
         }
 
         .project-album {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
+        }
+
+        .album-slides img {
+            flex-shrink: 0;
+            width: 65%;
+            height: 65%;
         }
 
         .project-album img {
@@ -89,7 +97,7 @@
             height: auto;
         }
 
-        .project-album .album-navigation {
+        .album-navigation {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -141,6 +149,37 @@
                 });
             });
         });
+        // JavaScript code for album navigation
+        document.addEventListener('DOMContentLoaded', function() {
+        const albumSlides = document.querySelector('.album-slides');
+        const prevButton = document.querySelector('.prev-button');
+        const nextButton = document.querySelector('.next-button');
+
+        let slideIndex = 0;
+        const slides = albumSlides.querySelectorAll('img');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slides[index].style.display = 'block';
+        }
+
+        prevButton.addEventListener('click', function() {
+            slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+            showSlide(slideIndex);
+        });
+
+        nextButton.addEventListener('click', function() {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            showSlide(slideIndex);
+        });
+
+        // Show the first slide by default
+        showSlide(slideIndex);
+        });
+
     </script>
 </head>
 <body>
@@ -164,10 +203,25 @@
     <div class="tab">
         <h2>Physics</h2>
         <div class="project-section">
-            <h2 class="project-title">Project 1</h2>
-            <p class="project-description">Description of Project 1.</p>
+            <h2 class="project-title">Quantum chaos: the kicked-rotor</h2>
+            <p class="project-description">This is a collection of programs developed during a 2 weeks internship at the
+                University of Lille. The internship takes place in the Cold Atoms team of the PHLAM laboratory, "Quantum
+                Chaos" group. This group has seven permanent members and four PhD students. The activities of the quantum
+                chaos group are based on an internationally recognised expertise in the theoretical and experimental study
+                of Anderson localization, a problem posed in the context of disordered media in condensed matter and addressed
+                here in an original system based on cold atoms and the "stricken rotator" model. This group, which has
+                several very fruitful collaborations with theorists and mathematicians through the CEMPI Laboratory of
+                Excellence (European Centre for Mathematics, Physics and their Interactions) and with the Interactions)
+                and with the Kastler Brossel laboratory (ENS, Sorbonne and Collège de France), which has three Nobel Prize
+                winners.
+                This internship focused on the modelisation of the Kicked Rotor, both in classical and quantum cases,
+                with the goal to study the specific case of a spin-1/2 particle.</p>
             <div class="project-album">
-                <img src="path_to_image1.jpg" alt="Image 1">
+                <div class="album-slides">
+                    <img src="./static/image/kickedrotor/chirikov_standard_map.png" alt="Chirikov standard map">
+                    <img src="./static/image/kickedrotor/density_classic.png" alt="Classical density of states">
+                    <img src="./static/image/kickedrotor/energy_groups.png" alt="Energy spacing for the 3 symmetry groups">
+                </div>
                 <div class="album-navigation">
                     <button class="prev-button">Previous</button>
                     <button class="next-button">Next</button>
