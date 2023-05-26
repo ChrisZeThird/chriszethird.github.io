@@ -7,7 +7,7 @@
     <style>
         /* CSS for tabs */
         body {
-            font-family: Cambria; /* Change the font family here */
+            font-family: 'Roboto', sans-serif; /* Change the font family here */
         }
 
         .tab {
@@ -19,18 +19,21 @@
             overflow: hidden; /* Ensure rounded corners are visible */
         }
 
+        .tab:hover {
+          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
         .tab.active {
             display: block;
         }
 
         .tab-links {
-            list-style-type: none;
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            background-color: #F2F2F2;
-            margin-top: 0;
+            color: #666666;
+            padding: 10px 20px;
+            background-color: #E6ECF0;
             border-radius: 10px;
+            overflow: hidden; /* Ensure rounded corners are visible */
+            transition: background-color 0.3s ease;
         }
 
         .tab-links li {
@@ -41,30 +44,50 @@
 
         .tab-link {
             color: #666666;
-            padding: 10px 20px;
+            padding: 15px 30px;
             background-color: #E6ECF0;
             border-radius: 10px;
             overflow: hidden; /* Ensure rounded corners are visible */
             transition: background-color 0.3s ease;
+            font-size: 18px;
+        }
+
+        .tab-link:hover {
+          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .tab-link.active {
-            background-color: #80B6D2;
+            background-color: var(--active-color);
             color: #FFFFFF;
         }
 
-        .home-button a {
-            color: #666666;
-            text-decoration: none;
-            padding: 5px 10px;
-            border: 1px solid #666666;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            margin-top: 0;
+        /* Additional styles to change the background color of each tab */
+        .tab-link[data-color] {
+            --active-color: var(--default-color);
         }
 
-        .home-button a:hover {
-            background-color: #E6ECF0;
+        .tab-link[data-color="#FFFFFF"] {
+            --default-color: #FFFFFF;
+        }
+
+        .tab-link[data-color="#022B3A"] {
+            --default-color: #022B3A;
+        }
+
+        .tab-link[data-color="#1F7A8C"] {
+            --default-color: #1F7A8C;
+        }
+
+        .tab-link[data-color="#BFDBF7"] {
+            --default-color: #BFDBF7;
+        }
+
+        .tab-link[data-color="#E1E5F2"] {
+            --default-color: #E1E5F2;
+        }
+
+        .tab-link[data-color="#DB5461"] {
+            --default-color: #DB5461;
         }
 
         .tab h1 {
@@ -283,11 +306,11 @@
 <body>
 
     <ul class="tab-links">
-        <li class="tab-link">Home</li>
-        <li class="tab-link">Physics</li>
-        <li class="tab-link">Programming</li>
-        <li class="tab-link">Art</li>
-        <li class="tab-link">Contact</li>
+        <li class="tab-link" data-color="#022B3A">Home</li>
+        <li class="tab-link" data-color="#1F7A8C">Physics</li>
+        <li class="tab-link" data-color="#BFDBF7">Programming</li>
+        <li class="tab-link" data-color="#E1E5F2">Art</li>
+        <li class="tab-link" data-color="#DB5461">Contact</li>
 
     </ul>
 
