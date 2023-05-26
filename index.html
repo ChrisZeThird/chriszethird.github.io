@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ChrisZeThird Projects Showcase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* CSS for tabs */
         .tab {
@@ -120,6 +121,62 @@
 
         .project-album .album-navigation .next-button {
             margin-left: auto;
+        }
+
+        /* CSS for contact form */
+        .contact-form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #F2F2F2;
+            border-radius: 5px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #CCCCCC;
+            resize: vertical;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #80B6D2;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #5A92B9;
+        }
+
+        .social-media-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-media-links a {
+            margin: 0 10px;
+            color: #666666;
+            transition: color 0.3s ease;
+        }
+
+        .social-media-links a:hover {
+            color: #80B6D2;
         }
     </style>
     <script>
@@ -242,7 +299,7 @@
         </div>
     </div>
 
-        <!-- Programming projects section -->
+    <!-- Programming projects section -->
     <div class="tab">
         <h2>Programming</h2>
         <div class="project-section">
@@ -270,7 +327,7 @@
         </div>
     </div>
 
-        <!-- Art projects section -->
+    <!-- Art projects section -->
     <div class="tab">
         <h2>Art</h2>
         <div class="project-section">
@@ -297,10 +354,33 @@
             </div>
         </div>
     </div>
-
+    <!-- Contacts section-->
     <div class="tab">
         <h2>Contacts</h2>
         <p>You can find all of my socials here.</p>
+
+        <div class="contact-form">
+            <h3>Contact Me</h3>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="social-media-links">
+            <a href="https://www.instagram.com/chriszethird/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/ChrisZeThird" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://discord.com/invite/TcwjZhE" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+        </div>
+
     </div>
 </body>
 </html>
