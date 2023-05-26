@@ -6,11 +6,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* CSS for tabs */
+        body {
+            font-family: Cambria; /* Change the font family here */
+        }
+
         .tab {
             display: none;
-            background-color: #FFFFFF;
-            padding: 20px;
+            background-color: transparent;
+            padding: 10px;
             height: calc(100vh - 60px); /* Adjust height to fill the full page */
+            border-radius: 10px;
+            overflow: hidden; /* Ensure rounded corners are visible */
         }
 
         .tab.active {
@@ -20,10 +26,11 @@
         .tab-links {
             list-style-type: none;
             padding: 10px 0;
-            margin: 0;
             display: flex;
             justify-content: center;
             background-color: #F2F2F2;
+            margin-top: 0;
+            border-radius: 10px;
         }
 
         .tab-links li {
@@ -36,7 +43,8 @@
             color: #666666;
             padding: 10px 20px;
             background-color: #E6ECF0;
-            border-radius: 5px;
+            border-radius: 10px;
+            overflow: hidden; /* Ensure rounded corners are visible */
             transition: background-color 0.3s ease;
         }
 
@@ -52,6 +60,7 @@
             border: 1px solid #666666;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            margin-top: 0;
         }
 
         .home-button a:hover {
@@ -59,9 +68,13 @@
         }
 
         .tab h1 {
-            font-size: 28px; /* Adjust the font size as per your preference */
+            font-size: 30px;
+            margin-top: 0;
         }
 
+        .tab h2 {
+            font-size: 25px; /* Change the font size here */
+        }
 
         /* CSS for project sections */
         .project-section {
@@ -186,7 +199,12 @@
                     if (i === tabIndex) {
                         tabContents[i].classList.add('active');
                         tabLinks[i].classList.add('active');
-                    } else {
+
+                        // Update background image based on selected tab
+                        const backgroundUrl = tabContents[i].dataset.background;
+                        document.body.style.backgroundImage = `url(${backgroundUrl})`;
+                    }
+                    else {
                         tabContents[i].classList.remove('active');
                         tabLinks[i].classList.remove('active');
                     }
@@ -199,6 +217,9 @@
                     showTab(index);
                 });
             });
+
+            // Show the "Home" tab by default
+            showTab(0);
         });
 
         // Automatic slide change
@@ -270,15 +291,17 @@
 
     </ul>
 
-    <div class="tab active">
-        <h2>Welcome to my website!</h2>
-        <p>I'm currently building it, so there isn't much to see at the moment. It's also a great opportunity to learn HTML and CSS.</p>
+    <div class="tab active" data-background="./static/image/backgrounds/cloudbg3.png">
+        <h1>Welcome to my website!</h1>
+        <p>I'm currently building it, so there isn't much to see at the moment. It's also a great opportunity to learn HTML
+            and CSS.</p>
 
+        <p>The backgrounds used were created by Boredomcake (check her instagram)!</p>
     </div>
 
     <!-- Physics projects section -->
-    <div class="tab">
-        <h2>Physics</h2>
+    <div class="tab" data-background="./static/image/backgrounds/cloudbg6.png">
+        <h1>Physics</h1>
         <div class="project-section">
             <h2 class="project-title">Quantum chaos: the kicked-rotor</h2>
             <p class="project-description">This is a collection of programs developed during a 2 weeks internship at the
@@ -320,8 +343,8 @@
     </div>
 
     <!-- Programming projects section -->
-    <div class="tab">
-        <h2>Programming</h2>
+    <div class="tab" data-background="./static/image/backgrounds/cloudbg8.png">
+        <h1>Programming</h1>
         <div class="project-section">
             <h2 class="project-title">Project 3</h2>
             <p class="project-description">Description of Project 3.</p>
@@ -348,8 +371,8 @@
     </div>
 
     <!-- Art projects section -->
-    <div class="tab">
-        <h2>Art</h2>
+    <div class="tab" data-background="./static/image/backgrounds/cloudbg4.png">
+        <h1>Art</h1>
         <div class="project-section">
             <h2 class="project-title">Project 5</h2>
             <p class="project-description">Description of Project 5.</p>
@@ -375,8 +398,8 @@
         </div>
     </div>
     <!-- Contacts section-->
-    <div class="tab">
-        <h2>Contacts</h2>
+    <div class="tab" data-background="./static/image/backgrounds/cloudbg1.png">
+        <h1>Contacts</h1>
         <p>You can find all of my socials here. For any inquiry, write me at: chriszethird.contact@gmail.com</p>
 
 
