@@ -7,7 +7,51 @@
     <style>
         /* CSS for tabs */
         body {
-            font-family: 'Roboto', sans-serif; /* Change the font family here */
+            font-family: 'Helvetica', serif;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-container .profile-picture {
+            border-radius: 100%;
+            height: 9em;
+            width: 9em;
+            margin-right: 20px;
+        }
+
+        .avatar-container {
+          position: relative;
+        }
+
+        .profile-username {
+            font-size: 5rem;
+            color: #ffffff;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: rgba(0,0,0,0.5) 0.05em 0.05em 0;
+        }
+        .profile-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .profile-quote {
+            font-size: 20px;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            text-shadow: rgba(0,0,0,0.5) 0.08em 0.08em 0;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
         }
 
         .tab {
@@ -19,19 +63,18 @@
             overflow: hidden; /* Ensure rounded corners are visible */
         }
 
-        .tab:hover {
-          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
         .tab.active {
             display: block;
+            color: #232323;
+            background-color: rgba(255, 255, 255, 0.3);
+            opacity: 0.7;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
         }
 
         .tab-links {
             color: #666666;
             padding: 10px 20px;
-            background-color: #E6ECF0;
-            border-radius: 10px;
+            background-color: transparent;
             overflow: hidden; /* Ensure rounded corners are visible */
             transition: background-color 0.3s ease;
         }
@@ -43,17 +86,16 @@
         }
 
         .tab-link {
-            color: #666666;
+            color: #ffffff;
             padding: 15px 30px;
-            background-color: #E6ECF0;
+            background-color: rgba(100, 100, 100, 0.6);
+            opacity: 0.7;
             border-radius: 10px;
             overflow: hidden; /* Ensure rounded corners are visible */
             transition: background-color 0.3s ease;
             font-size: 18px;
-        }
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 
-        .tab-link:hover {
-          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .tab-link.active {
@@ -86,12 +128,12 @@
             --default-color: #E1E5F2;
         }
 
-        .tab-link[data-color="#DB5461"] {
-            --default-color: #DB5461;
+        .tab-link[data-color="#C76B99"] {
+            --default-color: #C76B99;
         }
 
         .tab h1 {
-            font-size: 30px;
+            font-size: 40px;
             margin-top: 0;
         }
 
@@ -101,7 +143,7 @@
 
         /* CSS for project sections */
         .project-section {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .project-title {
@@ -305,14 +347,26 @@
 </head>
 <body>
 
-    <ul class="tab-links">
-        <li class="tab-link" data-color="#022B3A">Home</li>
-        <li class="tab-link" data-color="#1F7A8C">Physics</li>
-        <li class="tab-link" data-color="#BFDBF7">Programming</li>
-        <li class="tab-link" data-color="#E1E5F2">Art</li>
-        <li class="tab-link" data-color="#DB5461">Contact</li>
+    <section class="profile-container">
+        <div class="avatar-container">
+            <img class="profile-picture" draggable="false" src="./static/image/me-illustration/dolphin-scientist.png" alt="Profile Icon">
+        </div>
 
-    </ul>
+        <div class="profile-text">
+            <h1 class="profile-username">ChrisZeThird</h1>
+            <p class="profile-quote">No placeholders can resist me</p>
+        </div>
+    </section>
+
+    <div class="button-container">
+        <ul class="tab-links">
+            <li class="tab-link" data-color="#022B3A">Home</li>
+            <li class="tab-link" data-color="#1F7A8C">Physics</li>
+            <li class="tab-link" data-color="#BFDBF7">Programming</li>
+            <li class="tab-link" data-color="#E1E5F2">Art</li>
+            <li class="tab-link" data-color="#C76B99">Contact</li>
+        </ul>
+    </div>
 
     <div class="tab active" data-background="./static/image/backgrounds/cloudbg3.png">
         <h1>Welcome to my website!</h1>
@@ -421,7 +475,7 @@
         </div>
     </div>
     <!-- Contacts section-->
-    <div class="tab" data-background="./static/image/backgrounds/cloudbg1.png">
+    <div class="tab" data-background="./static/image/backgrounds/intern2.png">
         <h1>Contacts</h1>
         <p>You can find all of my socials here. For any inquiry, write me at: chriszethird.contact@gmail.com</p>
 
