@@ -171,12 +171,6 @@
             margin-bottom: 0;
         }
 
-        .album-slides img {
-            flex-shrink: 0;
-            width: 65%;
-            height: 65%;
-        }
-
         .project-album img {
             max-width: 100%;
             height: auto;
@@ -216,6 +210,7 @@
             height: 400px;
             overflow: hidden;
             position: relative;
+            transition: opacity 0.5s ease, filter 0.5s ease;
         }
 
         .album-slides img {
@@ -224,12 +219,14 @@
             height: 100%;
             object-fit: contain; /* Maintain the aspect ratio and fit the images within the container */
             transition: transform 0.5s ease; /* Add smooth transition effect */
+            border-radius: 10px;
         }
 
         /* CSS for automatic slide transition */
         .album-slides.automatic {
             animation: slide 5s infinite; /* Adjust the duration (5s) */
         }
+
 
         @keyframes slide {
             0% { transform: translateX(0); }
@@ -263,6 +260,7 @@
             --active-color: var(--default-color);
             color: var(--active-color);
         }
+
     </style>
     <script>
         // JavaScript for tabs
@@ -328,7 +326,7 @@
                 showSlide(slideIndex);
             }
 
-            setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+            setInterval(showNextSlide, 8000); // Change slide every 3 seconds
             });
         });
 
@@ -438,7 +436,12 @@
 
         <div class="project-section">
             <h2 class="project-title">Rayleigh Scattering</h2>
-            <p class="project-description">Description of Project 2.</p>
+            <p class="project-description">During the last semester of the 3rd year of Bachelor, students are to participate
+                in experimental classes during as an initiation of the life of a researcher in a laboratory. My project aimed
+                at finding a relation between the intensity of light diffused by a solution and the size of the diffusing
+                particles. <br> The first tests were made on diluted milk in water, but I then moved on a solution of Sodium
+                Thiosulfate
+            </p>
             <div class="project-album">
                 <div class="album-slides">
                     <img src="./static/image/rayleighscattering/blue-rayleigh.jpeg" alt="Thiosulfate solution">
