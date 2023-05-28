@@ -187,18 +187,25 @@
             padding: 5px 10px;
             border: none;
             background-color: #E6ECF0;
-            color: #666666;
+            color: #232323;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            border-radius: 10px;
+            width: 100px; /* Set a fixed width */
+            height: 40px; /* Set a fixed height */
+            margin: 0.2rem;
         }
 
         .project-album .album-navigation button:hover {
-            background-color: #80B6D2;
-            color: #FFFFFF;
+            --active-color: var(--default-color);
+            background-color: var(--active-color);
+            color: white;
         }
 
         .project-album .album-navigation .next-button {
-            margin-left: auto;
+        }
+
+        .project-album .album-navigation .prev-button {
         }
 
         /* CSS for album slides */
@@ -285,6 +292,12 @@
                         const tabColor = tabLinks[i].dataset.color;
                         socialMediaLinks.forEach(function(link) {
                             link.style.setProperty('--default-color', tabColor);
+                        });
+
+                        // Update next and previous button hover color based on selected tab
+                        const albumNavigationButtons = document.querySelectorAll('.album-navigation button');
+                        albumNavigationButtons.forEach(function (button) {
+                        button.style.setProperty('--active-color', tabColor);
                         });
                     }
                     else {
