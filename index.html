@@ -8,10 +8,10 @@
         /* CSS for tabs */
         body, html {
             font-family: 'Helvetica', serif;
-            height: 100%;
             background-position: center; /* Center the image */
             background-repeat: no-repeat; /* Do not repeat the image */
             background-attachment: fixed;
+            background-size: cover;
         }
 
         /* *{ border: 1px solid red; } */ /* add a red marker around all CSS element */
@@ -74,7 +74,6 @@
             display: block;
             color: #232323;
             background-color: rgba(255, 255, 255, 0.3);
-            opacity: 0.7;
             margin: 35px 20px; /* Reduce the margin to 20px horizontally and keep 35px vertically */
             box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
             height: auto;
@@ -98,7 +97,6 @@
             color: #ffffff;
             padding: 15px 30px;
             background-color: rgba(100, 100, 100, 0.6);
-            opacity: 0.7;
             border-radius: 10px;
             overflow: hidden; /* Ensure rounded corners are visible */
             transition: background-color 0.3s ease;
@@ -243,20 +241,27 @@
         }
 
         /* CSS for social media links */
+        .social-media-container {
+            display: flex;
+            justify-content: center;
+        }
+
         .social-media-links {
             display: flex;
             justify-content: center;
+            font-size: 50px;
             margin-top: 20px;
         }
 
         .social-media-links a {
             margin: 0 10px;
-            color: #666666;
+            color: #ffffff;
             transition: color 0.3s ease;
         }
 
         .social-media-links a:hover {
-            color: #80B6D2;
+            --active-color: var(--default-color);
+            color: var(--active-color);
         }
     </style>
     <script>
@@ -276,6 +281,13 @@
                         // Update background image based on selected tab
                         const backgroundUrl = tabContents[i].dataset.background;
                         document.body.style.backgroundImage = `url(${backgroundUrl})`;
+
+                        // Update social media links hover color based on selected tab
+                        const socialMediaLinks = document.querySelectorAll('.social-media-links a');
+                        const tabColor = tabLinks[i].dataset.color;
+                        socialMediaLinks.forEach(function(link) {
+                            link.style.setProperty('--default-color', tabColor);
+                        });
                     }
                     else {
                         tabContents[i].classList.remove('active');
@@ -374,6 +386,17 @@
             <li class="tab-link" data-color="#C76B99">Contact</li>
         </ul>
     </div>
+
+    <div class="social-media-container">
+        <div class="social-media-links">
+            <a href="https://www.instagram.com/chriszethird/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/ChrisZeThird" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://discord.com/invite/TcwjZhE" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+            <a href="mailto:chriszethird.contact@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+
+
 
     <div class="tab active" data-background="./static/image/backgrounds/cloudbg3.png">
         <h1>Welcome to my website!</h1>
@@ -486,15 +509,8 @@
     <!-- Contacts section-->
     <div class="tab" data-background="./static/image/backgrounds/intern2.png">
         <h1>Contacts</h1>
-        <p>You can find all of my socials here. For any inquiry, write me at: chriszethird.contact@gmail.com</p>
-
-
-        <div class="social-media-links">
-            <a href="https://www.instagram.com/chriszethird/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/ChrisZeThird" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-            <a href="https://discord.com/invite/TcwjZhE" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
-        </div>
-
+        <p>I have Discord, Instagram, Github, Redbubble, Displate and a dedicated contact address if you need to reach me.
+        I have no other social link. Feel free to send me a message if you have any question about my work.</p>
     </div>
 </body>
 </html>
