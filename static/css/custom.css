@@ -4,7 +4,9 @@
 
 .move-bottom-stuff-yes { margin-bottom: 3em; }
 
-.branding-grid { margin-top: 2em; }
+.branding-grid {
+  margin-top: 2em;
+}
 
 .branding-grid img {
   max-width: 45vmin;
@@ -31,7 +33,7 @@ code {
 }
 
 @media (max-width: 550px) {
-  .branding-grid img { max-width: 100%; }
+  .branding-grid img { max-width: 200%; }
 }
 
 footer {
