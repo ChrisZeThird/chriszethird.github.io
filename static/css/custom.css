@@ -1,0 +1,71 @@
+.me .title { font-size: 4em; text-shadow: rgba(0,0,0,0.5) 0.05em 0.05em 0;}
+.me .undertitle { font-size: 2em; }
+
+
+.move-bottom-stuff-yes { margin-bottom: 3em; }
+
+.branding-grid { margin-top: 2em; }
+
+.branding-grid img {
+  max-width: 45vmin;
+}
+
+.branding-grid video {
+  width: 100%;
+}
+
+.notice {
+  font-weight: bold;
+  font-style: italic;
+}
+
+code {
+  font-family: monospace;
+  background-color: #000;
+  border-radius: 5px;
+  padding: 0.1em .2em;
+}
+
+.branding-grid .title {
+  font-size: 2em;
+}
+
+@media (max-width: 550px) {
+  .branding-grid img { max-width: 100%; }
+}
+
+footer {
+  margin-top: 2em;
+  margin-bottom: 0 !important;
+}
+
+/* Ensure consistent column widths */
+table {
+  width: 100%;
+  margin-bottom: 20px; /* Space between tables */
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Set consistent widths for Name and Description columns */
+th:first-child, td:first-child {
+  width: 25%; /* Adjust to your preferred width */
+}
+
+th:last-child, td:last-child {
+  width: 75%; /* Adjust to your preferred width */
+}
+
+/* Add padding to the bottom of the container */
+.container {
+  padding-bottom: 40px; /* Ensure space at the bottom of the page */
+}
+
+/* Optional: Add some space between the tables and the content */
+h2 {
+  margin-top: 40px;
+}
