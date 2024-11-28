@@ -6,6 +6,8 @@
 
 .branding-grid {
   margin-top: 2em;
+  align-items: center;   /* Vertically center items */
+  justify-content: space-between; /* Even spacing between the columns */
 }
 
 .branding-grid img {
