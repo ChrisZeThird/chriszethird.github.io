@@ -1,4 +1,4 @@
-# BotZeFourth
+# ChrisZeThird
 - Site: https://chriszethird.github.io
 - Usage: Information about BotZeFourth
 
