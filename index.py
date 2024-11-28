@@ -11,5 +11,7 @@ with open("./static/data/commands.json", "r", encoding="utf8") as f:
 
 build.generate(
     debug=False if argument == "build" else True,
-    URL="chriszethird.github.io", commands=commands
+    URL="chriszethird.github.io",
+    commands=commands,
+    output_folder="./public"
 )
