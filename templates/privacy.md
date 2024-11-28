@@ -14,7 +14,7 @@ The contents of your commands are exclusively stored in the event a failure in t
 # Children's Privacy
 The Service does not address to anyone under the age of 13, or under the minimum age of digital consent in their country, whichever is greatest ("Minimum Age"). In the event we become aware someone under the applicable Minimum Age has provided us with personal information, we will immediately delete this data from our servers.
 
-If you are a parent or the legal guardian of a someone under the Minimum Age, please contact us so we can take the appropriate actions to protect your child.
+If you are a parent or the legal guardian of a person under the Minimum Age, please contact us, so we can take the appropriate actions to protect your child.
 
 # Changes to this Privacy Policy
 We may revise this Privacy Policy at any time, and your continued use of the Service will be seen as an acceptance of the revised terms.
