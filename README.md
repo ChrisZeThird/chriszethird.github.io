@@ -1,6 +1,6 @@
 # ChrisZeThird
 - Site: https://chriszethird.github.io
-- Usage: Information about BotZeFourth
+- Usage: Information about ChrisZeThird
 
 ## Frameworks
 This site proudly uses CSS from [Modesta](https://github.com/AlexFlipnote/Modesta) written by AlexFlipNote 
