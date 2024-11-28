@@ -1,0 +1,32 @@
+{
+  "Admin": {
+    "serverlist": "Give the list of servers where the bot is on (only for bot owner)",
+    "leaveserver": "Leave a server with its id given as argument (only for bot owner)",
+    "addrole": "Add roles allowed to use the bot database system",
+    "removerole": "Remove roles allowed to use the bot database system",
+    "addchannel": "Add channel where the bot will create artwork threads",
+    "removechannel": "Remove channel where the bot creates artwork threads",
+    "sendmessage": "Send message to targeted channel",
+    "makeinvite": "Generate invite link for current server",
+    "listmembers": "Make a list of all discord members for a given guild"
+  },
+    "OC Methods": {
+    "ocadd": "Add OC to the database with respect to user and guild id",
+    "ocdelete": "Delete an oc from the database",
+    "ocmodify": "Modify OC in the database with respect to user id",
+    "oclist": "List all oc of an artist for the current server",
+    "ocinfo": "Gives the information sheet of an given OC",
+    "ocrandom": "Send the description of a randomly selected OC "
+  },
+  "Suggestions": {
+    "suggest": "Make a suggestion to the developer",
+    "suggestionvote": "Vote for a suggestion",
+    "suggestionranking": "Check ranking of suggestions"
+  },
+  "Misc": {
+    "ping": "Pong!",
+    "invite": "Invite me to your server",
+    "botserver": "Get an invitation to our support server!",
+    "help": "Help command"
+  }
+}
