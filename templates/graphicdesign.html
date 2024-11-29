@@ -26,6 +26,30 @@
         <a href="https://bsky.app/profile/chriszethird.bsky.social" class="btn bsky-dropshadow white-text hover" target="_blank">Blusky</a>
     </div>
 
+    <!-- Image Gallery -->
+    <div class="gallery">
+      <div class="card" onclick="openOverlay(0)">
+        <img src="/static/images/portfolio/rubiks_poster.jpg" alt="Rubik's Poster">
+      </div>
+      <div class="card" onclick="openOverlay(1)">
+        <img src="/static/images/portfolio/pentablet.jpg" alt="Pen Tablet">
+      </div>
+      <div class="card" onclick="openOverlay(1)">
+        <img src="/static/images/portfolio/ipad.jpg" alt="Pen Tablet">
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay">
+      <div class="overlay-content">
+        <span class="close" onclick="closeOverlay()">&times;</span>
+        <button id="prevBtn" class="nav-btn" onclick="prevImage()">&#10094;</button>
+        <img id="overlay-image" src="" alt="Expanded View">
+        <button id="nextBtn" class="nav-btn" onclick="nextImage()">&#10095;</button>
+      </div>
+    </div>
+
     </section>
+    <script src="/static/scripts/script.js"></script>
     </body>
 </html>
