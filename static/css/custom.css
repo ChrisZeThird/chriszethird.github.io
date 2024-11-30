@@ -178,3 +178,72 @@ h2 {
   cursor: pointer;
   z-index: 1000;
 }
+
+/* Wrapper around the flipbook and controls */
+.flipbook-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Ensure the container clips the pages correctly */
+.flipbook-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden; /* Ensure content outside is hidden */
+  border: 1px solid #ccc;
+  background-color: #000;
+}
+
+/* Flipbook pages */
+.flipbook {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.flip-page {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+.flip-page img {
+  width: 100%;
+  height: auto;
+}
+
+/* Position the controls outside of the flipbook */
+.flip-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.nav-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nav-btn:first-child { /* Previous button */
+  left: -50px; /* Position outside the flipbook content */
+}
+
+.nav-btn:last-child { /* Next button */
+  right: -50px; /* Position outside the flipbook content */
+}
